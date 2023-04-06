@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,22 +8,41 @@
     <link rel="stylesheet" href="./style.css">
     <title>Eatery</title>
 </head>
+
 <body>
-    <h2>Welcome to my Eatery</h2>
-    <p><em> We make food on limited orders per day</em></p>
-    <img id="image" src="" alt="">
-    <p>Title:<span id="title"></span></p>
-    <p>Price:<span id="price"></span></p>
-
-    <div id="menuslist">
-        <h2>Menulist</h2>
-        <p>This is our Today's Menu</p>
-        <ul id="menus"></ul>
-    </div>
+    <section class="container">
+        <div class="heading">
+        <h2>Welcome to my Eatery</h2>
+        <p><em> We make food on limited orders per day so grab yours early!</em></p>
+        <input type="text" id="search-input" placeholder="Search...">
+        <button id="search-button">Search</button>
+        </div>
+        
 
 
-    
+        <div class="display-right">
+
+            <img id="image" src="" alt="">
+            <p><span id="title"></span></p>
+            <p>Price:<span id="price"></span></p>
+            <p>Remaining orders:<span id="orders"></span></p>
+            <button id="place-order"><span>Place order</span></button>
+            <button id="like-button">Like</button>
+        </div>
+
+        <div id="menuslist">
+            <h2>Menulist</h2>
+            <p>This is our Today's Menu</p>
+            <ul id="menus"></ul>
+        </div>
+
+       
+
+
+    </section>
+
 
     <script src="./script.js"></script>
 </body>
+
 </html>

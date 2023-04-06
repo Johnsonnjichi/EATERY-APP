@@ -1,7 +1,44 @@
 img{
     width: 300px;
     height: 300px;
+    border-radius: 10px;
 }
 ul{
     list-style: circle;
 }
+body{
+    background: lightblue;
+}
+.heading{
+    align-items: center;
+}
+.container {
+    margin: 20px;
+
+  }
+  
+
+.display-right {
+    float: right;
+    margin-right: 100px;
+  }
+  
+  #menuslist {
+    float: left;
+    padding: 10px;
+    margin-left: 100px;
+  }
+  
+
+
+
+
+/* .welcome{
+    align-items: center;
+    justify-content: center;
+    margin: 0 100px 0 800px;
+}
+#menulist{
+    margin-bottom: 400px;
+    align-items: start;
+} */

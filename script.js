@@ -19,7 +19,9 @@ function renderMenus() {
           renederSingleMenu(item.textContent, menus);
         });
       });
+      
     });
+    
 }
 renderMenus();
 
@@ -31,6 +33,7 @@ function renederSingleMenu(menuname, menus) {
   document.getElementById("orders").textContent = menu.order_capacity - menu.orders_received;
 
   document.getElementById("place-order");
+
 
   document.getElementById("place-order").addEventListener("click", () => {
     let ordersLeft = menu.order_capacity - menu.orders_received;
@@ -86,7 +89,46 @@ searchButton.addEventListener("click", () => {
   });
 
 
-  
+
+  const createMenuButton = document.getElementById("create-menu-button");
+
+createMenuButton.addEventListener("click", () => {
+  const menuTitleInput = document.getElementById("menu-title-input");
+  const menuImageInput = document.getElementById("menu-image-input");
+  const menuPriceInput = document.getElementById("menu-price-input");
+  const menuOrderCapacityInput = document.getElementById("menu-order-capacity-input");
+
+  const newMenu = {
+    title: menuTitleInput.value,
+    image: menuImageInput.value,
+    price: menuPriceInput.value,
+    order_capacity: menuOrderCapacityInput.value,
+    orders_received: 0
+  };
+
+  fetch("http://localhost:3000/menus", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(newMenu)
+  })
+    .then((res) => res.json())
+    .then((menu) => {
+      console.log(menu);
+      renderMenus();
+    })
+    .catch((err) => console.log(err));
+
+  menuTitleInput.value = "";
+  menuImageInput.value = "";
+  menuPriceInput.value = "";
+  menuOrderCapacityInput.value = "";
+});
 }
 
 
+
+
+
+  

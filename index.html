@@ -12,12 +12,12 @@
 <body>
     <section class="container">
         <div class="heading">
-        <h2>Welcome to my Eatery</h2>
-        <p><em> We make food on limited orders per day so grab yours early!</em></p>
-        <input type="text" id="search-input" placeholder="Search...">
-        <button id="search-button">Search</button>
+            <h2>Welcome to my Eatery</h2>
+            <p><em> We make food on limited orders per day so grab yours early!</em></p>
+            <input type="text" id="search-input" placeholder="Search...">
+            <button id="search-button">Search</button>
         </div>
-        
+
 
 
         <div class="display-right">
@@ -28,6 +28,7 @@
             <p>Remaining orders:<span id="orders"></span></p>
             <button id="place-order"><span>Place order</span></button>
             <button id="like-button">Like</button>
+            <button id="delete-button">Delete</button>
         </div>
 
         <div id="menuslist">
@@ -36,7 +37,14 @@
             <ul id="menus"></ul>
         </div>
 
-       
+        <div class="createmenu">
+            <input type="text" id="menu-title-input" placeholder="Enter menu title">
+            <input type="text" id="menu-image-input" placeholder="Enter menu image URL">
+            <input type="number" id="menu-price-input" placeholder="Enter menu price">
+            <input type="number" id="menu-order-capacity-input" placeholder="Enter order capacity">
+            <button id="create-menu-button">Create Menu</button>
+        </div>
+        
 
 
     </section>

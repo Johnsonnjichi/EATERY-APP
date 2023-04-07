@@ -6,7 +6,7 @@ function renderMenus() {
       let li = "";
 
       menus.forEach((menu) => {
-        li += `<li>${menu.title}</li>`;
+        li += `<li>${menu.title}`;
       });
       document.getElementById("menus").innerHTML = li;
       console.log(li);
@@ -19,6 +19,7 @@ function renderMenus() {
           renederSingleMenu(item.textContent, menus);
         });
       });
+      
       
     });
     
@@ -125,10 +126,34 @@ createMenuButton.addEventListener("click", () => {
   menuPriceInput.value = "";
   menuOrderCapacityInput.value = "";
 });
+
+
+//  Get the delete button element
+ const deleteButton = document.getElementById("delete-button");
+
+ // Add a click event listener to the delete button
+ deleteButton.addEventListener("click", () => {
+   // Find the index of the menu item to delete
+   const index = menus.findIndex((menu) => menu.title === menu.title);
+
+   // Remove the menu item from the menus array
+   menus.splice(index, 1);
+
+   // Render the updated menus list
+   let li = "";
+   menus.forEach((menu) => {
+     li += `<li>${menu.title}</li>`;
+   });
+   document.getElementById("menus").innerHTML = li;
+
+   // Render the first menu item in the updated menus list
+   renederSingleMenu(menus[0].title, menus);
+ });
 }
 
 
 
+  
 
 
   

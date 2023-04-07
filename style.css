@@ -1,52 +1,50 @@
-img{
+img {
     width: 300px;
     height: 300px;
     border-radius: 10px;
+
 }
-ul{
+
+ul {
     list-style: circle;
 }
-body{
+
+li {
+    cursor: pointer;
+
+}
+
+body {
     background: lightblue;
 }
-.heading{
+
+.heading {
     align-items: center;
 }
+
 .container {
     margin: 20px;
 
-  }
-  
+}
+
 
 .display-right {
     float: right;
     margin-right: 100px;
     margin-bottom: 30px;
-  }
-  
-  #menuslist {
+}
+
+#menuslist {
     float: left;
     padding: 10px;
-    margin-left: 100px;
+    margin-left: 80px;
     margin-bottom: 90px;
-  }
-.createmenu{
+}
+
+.createmenu {
 
     float: left;
     margin-bottom: 100px;
     margin-top: 30px;
 
-  }
-
-
-
-
-/* .welcome{
-    align-items: center;
-    justify-content: center;
-    margin: 0 100px 0 800px;
 }
-#menulist{
-    margin-bottom: 400px;
-    align-items: start;
-} */
